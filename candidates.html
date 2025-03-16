@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Welding Solutions – Для кандидатов</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/candidate.css') }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+        <img src="img/logo.png" alt="Welding Solutions" />
+      </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a class="highlight" href="#">Присоединяйтесь</a></li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main class="main-section">
+    <div class="content-wrapper">
+      <!-- Заголовок -->
+      <h1 class="main-title">
+        Welding Solutions <span>для</span>
+        <span class="red-word">кандидатов</span>
+      </h1>
+
+      <!-- Форма -->
+      <form class="candidate-form">
+        <!-- 1) Имя / Фамилия -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">Ваша фамилия</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+        </div>
+
+        <!-- 2) E-mail / Телефон -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Ваш адрес электронной почты</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Ваш телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <!-- 3) Процесс / Категории -->
+        <div class="form-row">
+          <!-- Процесс -->
+          <div class="form-group">
+            <label for="process">Процесс</label>
+            <input type="text" id="process" name="process" placeholder="Укажите другой процесс...">
+          </div>
+          <!-- Категории -->
+          <div class="form-group">
+            <label>Категории</label>
+            <div class="category-options">
+              <label>
+                <input type="checkbox" name="category" value="Металлоконструкции"> Металлоконструкции
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="Судостроение"> Судостроение
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="Автомобилестроение"> Автомобилестроение
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="Электросварка"> Электросварка
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4) Опыт работы -->
+        <div class="form-row experience-row">
+          <div class="form-group">
+            <label for="experience">Опыт работы</label>
+            <div class="experience-options">
+              <label>
+                <input type="radio" name="experience" value="1-2"> 1-2
+              </label>
+              <label>
+                <input type="radio" name="experience" value="3-5"> 3-5
+              </label>
+              <label>
+                <input type="radio" name="experience" value="5+"> 5+
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5) Доп. информация -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="info">Дополнительная информация</label>
+            <textarea id="info" name="info" rows="12"></textarea>
+          </div>
+        </div>
+
+        <!-- 6) Кнопки -->
+        <div class="form-row form-submit-row">
+          <button type="button" class="btn-resume">Добавить своё резюме</button>
+          <button type="submit" class="btn-submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* ====== ОБНУЛЕНИЕ И БАЗОВЫЕ СТИЛИ ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ====== ФОН И КРАСНЫЕ ФИГУРЫ ====== */
+  body {
+    background-color: #000;
+    background-image: url("../img/Fon.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+  }
+  
+  /* ====== ШАПКА ====== */
+  .header {
+    width: 100%;
+    height: 70px;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  .main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  .main-nav a.highlight {
+    color: #cc0000;
+  }
+  
+  /* ====== ГЛАВНЫЙ БЛОК (ТЕКСТ + ФОРМА) ====== */
+  .main-section {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Заголовок */
+  .main-title {
+    font-size: 45px;
+    margin-bottom: 150px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .main-title span {
+    font-weight: normal;
+  }
+  .red-word {
+    color: #cc0000;
+    font-weight: bold;
+  }
+  
+  /* ====== ФОРМА ====== */
+  /* УБИРАЕМ gap: ... и переходим к margin-bottom. */
+  .candidate-form {
+    display: flex;
+    flex-direction: column;
+    /* НЕ используем gap, чтобы margin-top/-bottom работали, 
+       и каждый .form-row будем "отделять" через margin-bottom. */
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Горизонтальный зазор между колонками внутри ряда */
+    margin-bottom: 20px; /* Отступ снизу у каждого ряда */
+  }
+  /* Если надо, последний ряд без отступа снизу */
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Если нужно "поднять" опыт работы ближе к предыдущему ряду, 
+     просто уменьшаем margin-top, либо ставим отрицательный: */
+  .experience-row {
+    margin-top: -79px; /* Поднимаем на 5px выше */
+    /* При этом row всё ещё имеет margin-bottom: 20px, заданный выше */
+  }
+  
+  /* Группы */
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    font-size: 12px;
+    color: #000;
+  }
+  textarea {
+    resize: none;
+    font-weight: bold;
+  }
+  
+  /* Уменьшаем ширину поля "Процесс" */
+  #process {
+    max-width: 300px;
+  }
+  
+  /* Чекбоксы и радио */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    accent-color: #cc0000;
+    border-radius: 0;
+  }
+  
+  /* Категории */
+  .category-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .category-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+  }
+  
+  /* Опыт работы */
+  .experience-options {
+    display: flex;
+    gap: 15px;
+  }
+  .experience-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+  }
+  
+  /* Кнопки */
+  .form-submit-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .btn-resume {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-resume:hover {
+    background-color: #f2f2f2;
+  }
+  .btn-submit {
+    padding: 10px 20px;
+    background-color: #cc0000;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-submit:hover {
+    background-color: #a30000;
+  }
+  
+  /* ====== АДАПТАЦИЯ ====== */
+  @media (max-width: 768px) {
+    .header-container,
+    .content-wrapper {
+      width: 90%;
+    }
+    .form-row {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    .main-title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    .candidate-form {
+      width: 100%;
+    }
+    #process {
+      max-width: 100%;
+    }
+  }
+  

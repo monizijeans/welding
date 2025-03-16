@@ -1,0 +1,162 @@
+/* ====== ОБНУЛЕНИЕ И БАЗОВЫЕ СТИЛИ ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ====== ФОН И КРАСНЫЕ ФИГУРЫ ====== */
+body {
+    background-color: #000000; 
+    background-image: url("../img/Fon.png"); /* Путь к картинке; меняйте при необходимости */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: #fff;
+}
+
+/* ====== ШАПКА ====== */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #e5e5e5; 
+    display: flex;
+    align-items: center;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px; 
+    margin: 0 auto;
+}
+.logo img {
+    height: 40px; 
+}
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.main-nav a.highlight {
+    color: #cc0000; 
+}
+
+/* ====== ГЛАВНЫЙ БЛОК (ТЕКСТ + ФОРМА) ====== */
+.main-section {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Заголовок */
+.main-title {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 150px; /* Разделение заголовка и формы */
+}
+.main-title span {
+    font-weight: normal;
+}
+.main-title .red-word {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* ====== ФОРМА ====== */
+.company-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;          /* Меньше вертикальный зазор между рядами */
+    color: #fff;
+    min-width: 800px;   /* Ширина формы */
+    margin: 0 auto;
+}
+.form-row {
+    display: flex;
+    gap: 30px;          /* Расстояние между колонками */
+    align-items: flex-start; 
+}
+.form-row.full-width {
+    flex-wrap: wrap;
+}
+.form-group {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Увеличиваем и делаем жирнее текст внутри формы */
+.company-form label {
+    font-weight: bold;
+    font-size: 18px;    /* увеличен размер */
+    margin-bottom: 5px;
+}
+.company-form input[type="text"],
+.company-form input[type="email"],
+.company-form input[type="tel"],
+.company-form input[type="number"],
+.company-form textarea,
+.company-form select {
+    width: 100%;       
+    padding: 15px;     
+    border: 2px solid #ccc; 
+    border-radius: 0;  
+    font-size: 14px;    /* немного увеличен размер */
+    font-weight: bold;  /* делаем жирнее */
+    color: #000;
+}
+
+/* Текстовое поле */
+textarea {
+    resize: none; 
+}
+
+/* Кнопка */
+.form-submit-row {
+    display: flex;
+    justify-content: center; /* Центрирование кнопки */
+  }
+  .btn-submit {
+    padding: 20px 30px;  /* Увеличенные отступы */
+    background-color: #cc0000;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;     /* Немного больше размер шрифта */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-submit:hover {
+    background-color: #a30000;
+  }
+
+/* ====== АДАПТАЦИЯ (для мобильных) ====== */
+@media (max-width: 768px) {
+    .header-container,
+    .content-wrapper {
+      width: 90%;
+    }
+    .form-row {
+      flex-direction: column; 
+      gap: 10px;
+    }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welding Solutions - Профессиональные услуги</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Подключаем Montserrat (bold + light) -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap">
+
+  <!-- Подключение нашего CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <a href="index.html">
+        <img src="img/logo.png" alt="Welding Solutions" />
+      </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#join">Присоединяйтесь</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ОБЁРТКА, которая делает правую половину экрана серой -->
+  <div class="right-gray-wrapper">
+
+    <!-- HERO (слайдер...) -->
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h2 class="hero__title">ПРОФЕССИОНАЛЬНЫЕ УСЛУГИ</h2>
+        <p class="hero__subtitle">
+          МЕТАЛЛОКОНСТРУКЦИИ, СУДОСТРОЕНИЕ И РЕМОНТ СУДОВ, ЭЛЕКТРОМОНТАЖ
+        </p>
+        <div class="hero__separator"></div>
+      </div>
+      <div class="hero__author">
+        Автор фото: V. UZVARDS<br>
+        Роль: Техническое руководство
+      </div>
+      <div class="hero__slider-wrapper">
+        <swiper-container
+          class="mySwiper"
+          navigation="true"
+          pagination="true"
+          keyboard="true"
+          mousewheel="true"
+          css-mode="true"
+        >
+          <swiper-slide>
+            <img src="img/hero2.png" alt="Слайд 1">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="img/hero2.png" alt="Слайд 2">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="img/hero2.png" alt="Слайд 3">
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </section>
+
+    <!-- О КОМПАНИИ -->
+    <section class="company" id="about">
+      <div class="container company__inner">
+        <h2 class="section-title">Компания Welding solutions</h2>
+        <div class="company__separator"></div>
+
+        <p class="section-text">
+          Добро пожаловать в Welding solutions! Мы предлагаем
+          специализированных специалистов для различных отраслей
+          промышленности...
+        </p>
+        <p class="section-text">
+          Узнайте, как наши сотрудники могут продвинуть ваш бизнес вперёд.
+          Мы всегда нацелены на качество, безопасность и точность.
+        </p>
+
+        <div class="company__btn-row">
+          <a href="candidates.html" class="btn company__btn-left">Для кандидатов</a>
+          <a href="clients.html" class="btn company__btn-right">Для компаний</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end .right-gray-wrapper -->
+
+  <!-- Красная полоса со статистикой -->
+  <section class="stats">
+    <div class="container stats__inner">
+      <div class="stats__item">
+        <img src="img/briefcase.png" alt="Briefcase" class="stats__icon" />
+        <span class="stats__number">148</span>
+        <span class="stats__desc">Проекты завершены</span>
+      </div>
+      <div class="stats__item">
+        <img src="img/clock-nine.png" alt="Clock" class="stats__icon" />
+        <span class="stats__number">8465</span>
+        <span class="stats__desc">Рабочее время</span>
+      </div>
+      <div class="stats__item">
+        <img src="img/star.png" alt="Star" class="stats__icon" />
+        <span class="stats__number">148</span>
+        <span class="stats__desc">Положительные отзывы</span>
+      </div>
+      <div class="stats__item">
+        <img src="img/heart.png" alt="Heart" class="stats__icon" />
+        <span class="stats__number">148</span>
+        <span class="stats__desc">Довольные клиенты</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Портфолио -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="portfolio__grid">
+        <div class="portfolio__item"><img src="img/1.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/2.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/3.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/4.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/5.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/6.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/7.png" alt="..." /></div>
+        <div class="portfolio__item"><img src="img/8.png" alt="..." /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- СЕКЦИЯ "НАШИ ОТРАСЛИ" -->
+  <section class="industries" id="industries">
+    <div class="container">
+      <h2 class="section-title">Наши отрасли</h2>
+      <!-- Серая полоса -->
+      <div class="section-separator"></div>
+
+      <p class="section-text">
+        Welding solutions предлагает специалистов для различных отраслей
+        промышленности. Будь то металлоконструкции, судостроение, электрика,
+        склад и т.д.
+      </p>
+    </div>
+  </section>
+
+  <!-- СЕКЦИЯ "Кого мы ищем" (с сепаратором) -->
+  <section class="who-we-need">
+    <div class="container">
+      <h2 class="section-title">Кого мы ищем</h2>
+      <div class="section-separator"></div>
+
+      <div class="who-we-need__grid">
+        <div class="who-we-need__item">
+          <img src="img/metallo.jpg" alt="Металлоконструкции" />
+          <h3>Металлоконструкции</h3>
+        </div>
+        <div class="who-we-need__item">
+          <img src="img/ship.jpg" alt="Судостроение" />
+          <h3>Судостроение</h3>
+        </div>
+        <div class="who-we-need__item">
+          <img src="img/electro.jpg" alt="Электромонтаж" />
+          <h3>Электромонтаж</h3>
+        </div>
+        <div class="who-we-need__item">
+          <img src="img/warehouse.jpg" alt="Складские работы" />
+          <h3>Складские работы</h3>
+        </div>
+      </div>
+      <div class="who-we-need__action">
+        <a href="candidates.html" class="btn">Присоединиться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- СЕКЦИЯ "Преимущества, которые убеждают" (с сепаратором) -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Преимущества, которые убеждают</h2>
+      <div class="section-separator"></div>
+
+      <div class="benefits__grid">
+        <div class="benefits__item">
+          <h3>Квалифицированные специалисты</h3>
+          <p>Мы предоставляем...</p>
+        </div>
+        <div class="benefits__item">
+          <h3>Эффективность</h3>
+          <p>Наше эффективное...</p>
+        </div>
+        <div class="benefits__item">
+          <h3>Гибкость</h3>
+          <p>От 50 до 400 сотрудников...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Что важно -->
+  <section class="important">
+    <div class="container">
+      <h2 class="section-title">Что для нас важно</h2>
+      <p class="section-text">
+        Надёжность, качество и гибкость — основные ценности...
+      </p>
+    </div>
+  </section>
+
+  <!-- Отзыв (на красном фоне) -->
+  <section class="testimonial" id="reviews">
+    <div class="container testimonial__content">
+      <blockquote class="testimonial__quote">
+        «Превосходная работа, превзошла все ожидания...»
+      </blockquote>
+      <p class="testimonial__author">Maris Korpins</p>
+    </div>
+  </section>
+
+  <!-- Партнёры -->
+  <section class="partners">
+    <div class="container partners__inner">
+      <img src="img/dnv.png" alt="DNV" />
+      <img src="img/bureau-veritas.png" alt="Bureau Veritas" />
+      <img src="img/gl.png" alt="GL" />
+      <img src="img/tuvnord.png" alt="TUV Nord" />
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__info">
+        <p>E-mail: welding@welding.lv<br>
+           Phone: +371 20 000 000</p>
+        <p>Gustava Zemgala gat. 77<br>
+           Rīga, LV-1039</p>
+      </div>
+      <p class="footer__copy">
+        &copy; Welding Solutions 2025. Все права защищены.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Подключаем Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>

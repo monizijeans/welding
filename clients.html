@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Welding Solutions – Для компаний</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/company.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+        <img src="img/logo.png" alt="Welding Solutions" />
+      </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a class="highlight" href="#">Присоединяйтесь</a></li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ (блок с заголовком и формой) -->
+  <main class="main-section">
+    <div class="content-wrapper">
+      <!-- Заголовок -->
+      <h1 class="main-title">
+        Welding Solutions <span>для</span>
+        <span class="red-word">компаний</span>
+      </h1>
+
+      <!-- Форма -->
+      <form class="company-form">
+        <!-- Строка 1: Компания / E-mail -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Компания</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш адрес электронной почты</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <!-- Строка 2: Ваше имя / Ваш телефон -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Ваш телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <!-- Строка 3 (на всю ширину): Конкретный проект -->
+        <div class="form-row full-width">
+          <div class="form-group">
+            <label for="project">Конкретный проект</label>
+            <input type="text" id="project" name="project">
+          </div>
+        </div>
+
+        <!-- Строка 4: Специалисты / Сколько -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="specialists">Специалисты</label>
+            <select id="specialists" name="specialists">
+              <option>Выберите вариант</option>
+              <option>Сварщик</option>
+              <option>Инженер</option>
+              <option>Конструктор</option>
+              <option>Менеджер проекта</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="number">Сколько</label>
+            <input type="number" id="number" name="number" min="0" value="0">
+          </div>
+        </div>
+
+        <!-- Строка 5 (на всю ширину): Дополнительная информация -->
+        <div class="form-row full-width">
+          <div class="form-group">
+            <label for="info">Дополнительная информация</label>
+            <textarea id="info" name="info" rows="5"></textarea>
+          </div>
+        </div>
+
+        <!-- Кнопка Отправить -->
+        <div class="form-submit-row">
+          <button type="submit" class="btn-submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
